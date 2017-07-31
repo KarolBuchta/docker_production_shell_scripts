@@ -4,34 +4,27 @@
 
 ### docker_compose_production.sh
 
-
-
-You can use this script as an alias as in your shell.
+You can use this script as an alias in your shell.
 
 
 It will avoid the execution of the following command, and print a warning instead.
-
-
-The execution will be continued, but without the -v/--volumes 
-
 
 ```
   docker-compose down -v
   docker-compose down --volumes
 ```
 
+The execution will be continued, but without the -v/--volumes arguments. 
 
 Copy the shell file to your desired location
 ```
   chmod +x docker_compose_production.sh && cp docker_compose_production.sh /usr/local/bin/
 ```
 
-
-Add this as an alias in you shell config (e.g. ~/.zshrc, ~/.bashrc)
+Add this as an alias in your shell config (e.g. ~/.zshrc, ~/.bashrc)
 
 ```
-alias docker-compose='/usr/local/bin/docker_compose_production.sh docker-compose'
-
+  alias docker-compose='/usr/local/bin/docker_compose_production.sh docker-compose'
 ```
 
 The script was tested with
@@ -52,6 +45,7 @@ The script was tested with
 * dash
 
 ### Disclaimer
+
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
